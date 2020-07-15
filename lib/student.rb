@@ -9,6 +9,7 @@ class Student
 # puts student_hash[":name"]
     @name=student_hash[:name]
     @location=student_hash[:location]
+    @profile_url=student_hash[:profile_url]
     @@all << self
   end
 
