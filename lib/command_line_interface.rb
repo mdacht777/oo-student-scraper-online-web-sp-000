@@ -31,7 +31,7 @@ class CommandLineInterface
       student.instance_variables.each do |attr, value|
         # binding.pry
         label=attr
-        label=label.gsub(/\@/, "")
+        label=label.gsub(/@/, "")
         puts " #{label}:  #{student.instance_variable_get(attr)}" if student.instance_variable_get(attr)!=nil
       end
       # puts "  location:".colorize(:light_blue) + " #{student.location}"
