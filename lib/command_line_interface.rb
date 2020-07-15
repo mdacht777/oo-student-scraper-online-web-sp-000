@@ -33,7 +33,11 @@ class CommandLineInterface
         label=attr.to_s
         label=label.gsub(/@/, "")
         label=label.gsub(/_/, " ")
-        puts "  #{label}:  #{student.instance_variable_get(attr)}" if student.instance_variable_get(attr)!=nil
+        if label=="name"
+        elsif label=="profile url"
+        else
+          puts "  #{label}: #{student.instance_variable_get(attr)}" if student.instance_variable_get(attr)!=nil
+        end
       end
       # puts "  location:".colorize(:light_blue) + " #{student.location}"
       # puts "  profile quote:".colorize(:light_blue) + " #{student.profile_quote}"
