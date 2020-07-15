@@ -29,8 +29,8 @@ class CommandLineInterface
     Student.all.each do |student|
       puts "#{student.name.upcase}".colorize(:blue)
       student.instance_variables.each do |attr, value|
-        binding.pry
-        puts " #{attr}:  #{attr.value}"
+        # binding.pry
+        puts " #{attr}:  #{student.instance_variable_get(attr)}"
       end
       # puts "  location:".colorize(:light_blue) + " #{student.location}"
       # puts "  profile quote:".colorize(:light_blue) + " #{student.profile_quote}"
