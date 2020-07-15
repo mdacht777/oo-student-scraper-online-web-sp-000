@@ -28,8 +28,8 @@ class CommandLineInterface
   def display_students
     Student.all.each do |student|
       puts "#{student.name.upcase}".colorize(:blue)
-# binding.pry
       student.instance_variables.each do |attr, value|
+        binding.pry
         puts " #{attr}:  #{attr.value}"
       end
       # puts "  location:".colorize(:light_blue) + " #{student.location}"
